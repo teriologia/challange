@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  form(action="/login" method="POST")
+    p
+        |Email: 
+        input(type="email", name="email", placeholder="Email", required)
+        br
+        br
+        |password: 
+        input(type="password", name="password", placeholder="password", required)
+        br
+        br
+        input(type="submit")

@@ -3,3 +3,12 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  - var n = 0;
+  - var limit = 10;
+    while n < limit 
+      div
+        ul
+          a(href='#'+data[n].id)
+            span= data[n].title
+            br
+            - n++
