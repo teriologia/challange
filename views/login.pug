@@ -2,14 +2,17 @@ extends layout
 
 block content
   h1= title
+  if status === 401
+    div
+      span= error
   form(action="/login" method="POST")
     p
         |Email: 
-        input(type="email", name="email", placeholder="Email", required)
+        input#email(type="email", name="email", placeholder="Email", required)
         br
         br
         |password: 
-        input(type="password", name="password", placeholder="password", required)
+        input#password(type="password", name="password", placeholder="password", required)
         br
         br
-        input(type="submit")
+        input#submit(type="submit")

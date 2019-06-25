@@ -12,12 +12,11 @@ router.get('/', (req, res, next) => {
 router.post('/', loginController, (req, res, next) => {
   if(res.locals.islogin)
   {
-    res.redirect('/album?');
+    res.redirect('/album');   
   }
   else{
-    res.send('Wrong user name or password')
+    res.render('login', { title: 'LOGIN', status: 401, error: 'Wrong Login or Password'})
   }
-
 });
 
 module.exports = router;
