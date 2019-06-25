@@ -4,14 +4,15 @@ block content
   div#albums
     h1= title
     - var n = 0;
-    - var limit = 10;
+    - var limit = 100;
     div.content
       div.top-content
-        while n < limit 
+        .links
+          while n < limit 
               a(class='albumList' href='#'+data[n].id)
-                span= data[n].title
-                br
+                =data[n].title
                 - n++
         
         div#images
+          ul
       div#big-image
