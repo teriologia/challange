@@ -64,7 +64,8 @@
             padding:6px 4px;
         }
     }
-    @media(max-width:480px){
+    @media(max-width:960px){
+        min-height: calc(100vh - 54px);
         .login-content {
             width: 100%;
             padding: 0 15px;
