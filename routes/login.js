@@ -15,7 +15,6 @@ router.post('/', loginController, (req, res, next) => {
     res.redirect('/album');   
   }
   else{
-    res.sendStatus(401)
     res.render('login', { title: 'LOGIN', status: 401, error: 'Wrong Login or Password'})
   }
 });

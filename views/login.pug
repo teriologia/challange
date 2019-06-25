@@ -1,18 +1,20 @@
 extends layout
 
 block content
-  h1= title
-  if status === 401
-    div
-      span= error
-  form(action="/login" method="POST")
-    p
-        |Email: 
-        input#email(type="email", name="email", placeholder="Email", required)
-        br
-        br
-        |password: 
-        input#password(type="password", name="password", placeholder="password", required)
-        br
-        br
-        input#submit(type="submit")
+  div#login
+    .login-content
+      h1= title
+      if status === 401
+        div.alert
+          b= error
+      form(action="/login" method="POST")
+            label#email
+              span
+                |Email:
+              input#email(type="email", name="email", placeholder="Type your email", required)
+            label#password
+              span
+                |Password:
+              input#password(type="password", name="password", placeholder="Type your password", required)
+            button(type="submit")
+              |Login

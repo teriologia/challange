@@ -5,7 +5,7 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 
 //source file paths
-var js = './Js/*.js'
+var js = './src/Js/*.js'
 var style = './src/styles/*.scss'
 
 // output file paths
@@ -14,7 +14,7 @@ var bundleStyle = './public/stylesheets'
 
 // Compile Sass
 gulp.task('sass', function () {
-    gulp.src(style)
+    gulp.src('./src/styles/styles.scss')
         .pipe(concat('style.css'))
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest(bundleStyle));

@@ -27,5 +27,5 @@ const renderBigImage = (url) => {
     `;
 
     //rendering html inside bigImage div
-    document.getElementById('bigImage').innerHTML = html
+    document.getElementById('big-image').innerHTML = html
 }
