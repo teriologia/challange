@@ -6,9 +6,10 @@ block content
   - var n = 0;
   - var limit = 10;
     while n < limit 
-      div
-        ul
-          a(href='#'+data[n].id)
+          a(class='albumList' href='#'+data[n].id)
             span= data[n].title
             br
             - n++
+    
+    div#images
+    div#bigImage
