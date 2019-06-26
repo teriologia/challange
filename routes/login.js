@@ -14,7 +14,7 @@ router.post('/', loginController, (req, res, next) => {
   //if statemant to control local variable from login controller
   if(res.locals.islogin)
   {
-    req.session
+    req.session.islogin = true;
     res.redirect('/album');   
   }
   else{
