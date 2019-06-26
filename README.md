@@ -1,5 +1,11 @@
+
 # Project Description
-Simple node.js application rendering '*.pug' files. Handling GET and POST request
+#### Backend
+Simple node.js application using template engine pug and rendering `*.pug` files. Handling GET and POST request, you can check routes under the page
+
+### Frontend
+using `.scss` for styling
+Using gulp for bundle `.scss` files and `javascript` files
 
 # installation
 1. Clone repo: `git clone https://github.com/teriologia/challenge.git`
