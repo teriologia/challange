@@ -1,4 +1,4 @@
-#Project Description
+# Project Description
 Simple node.js application rendering '*.pug' files. Handling GET and POST request
 
 # installation
