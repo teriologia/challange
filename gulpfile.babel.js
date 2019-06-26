@@ -22,15 +22,17 @@ gulp.task('sass', function () {
 
 // combine javascript files
 gulp.task('scripts', function () {
-    gulp.src('./src/Js/*.js')
+    gulp.src(js)
         .pipe(babel())
         .pipe(concat('main.js'))
         .pipe(uglify())
         .pipe(gulp.dest(bundleJs));
 });
 
+// when run Gulp command default task will start
 gulp.task('default', ['sass', 'scripts']);
 
+//watching file changes 
 gulp.task('watch', function () {
     gulp.watch(js, ['scripts']);
     gulp.watch(style, ['sass']);

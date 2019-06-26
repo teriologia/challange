@@ -18,7 +18,7 @@ const renderThumbnail = (data) =>{
     }
 
     // rendering html inside images div
-    document.querySelector('#images ul').innerHTML = html
+    document.querySelector('#images ul').innerHTML = html;
 }
 
 //Getting url when thumbnail click and rendering image
@@ -29,5 +29,5 @@ const renderBigImage = (url) => {
     `;
 
     //rendering html inside bigImage div
-    document.getElementById('big-image').innerHTML = html
+    document.getElementById('big-image').innerHTML = html;
 }
