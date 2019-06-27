@@ -2,6 +2,7 @@ var gulp = require("gulp");
 var babel = require("gulp-babel");
 var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
+var cleanCSS = require('gulp-clean-css');
 var concat = require('gulp-concat');
 
 //source file paths
@@ -17,6 +18,7 @@ gulp.task('sass', function () {
     gulp.src('./src/styles/styles.scss')
         .pipe(concat('style.css'))
         .pipe(sass().on('error', sass.logError))
+        .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(gulp.dest(bundleStyle));
 });
 
